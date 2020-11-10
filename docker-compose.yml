@@ -7,7 +7,7 @@ services:
         restart: always
         environment:
             - APP_NAME=chungoba
-        expose: - unix:/home/ubuntu/chungoba/chungoba.sock
+        expose: - 8080
         
     nginx: 
         build: ./nginx
