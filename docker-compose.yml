@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      dockerfile: ./deployments/docker/dockerfile_nginx
+    ports:
+      - 80:80
+    links: 
+      - chungoba:chungoba
+    depends_on: 
+      - chungoba
+  chungoba:
+    container_name: chungoba
+    build: 
+      context: .
+      dockerfile: ./deployments/docker/dockerfile_app
+    ports: 
+      - 5000
