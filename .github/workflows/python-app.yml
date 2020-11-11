@@ -35,8 +35,7 @@ jobs:
         
     - name: push changed files
       run: |
-        git add .
+        pwd
         git push origin master
         git config pull.ff only
-        cd ..
-        sudo systemctl restart chungoba
+        
