@@ -26,5 +26,5 @@ jobs:
         
     - name: push changed files
       run: |
-        cd ../chungoba
+        cd chungoba
         git pull origin master
