@@ -29,4 +29,6 @@ jobs:
         pwd
         git push origin master
         git config pull.ff only
+        cd ..
+        git pull
         
