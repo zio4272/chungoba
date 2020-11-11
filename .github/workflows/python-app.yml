@@ -27,6 +27,5 @@ jobs:
         
     - name: test.sh
       run: |
-        cd ../chungoba bash test.sh
-
-        
+        cd /home/ubuntu/chungoba
+        bash test.sh     
