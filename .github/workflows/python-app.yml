@@ -19,6 +19,15 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    - name: install deploy keys
+      env:
+        GH_ACTION_DEPLOY_KEY: ${{ secrets.GH_ACTION_DEPLOY_KEY }}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
