@@ -42,4 +42,4 @@ jobs:
         git add .
         git commit -m "generated"
         git push
-        git pull
+        git config pull.ff only
