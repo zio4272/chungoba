@@ -35,4 +35,5 @@ jobs:
       run: |
         pwd
         ls
+        bash test.sh
       working-directory: ${{ env.working-directory }}
