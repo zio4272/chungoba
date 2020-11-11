@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: ./
       with:
         python-version: ${{ matrix.python-version }}
         
@@ -31,6 +31,4 @@ jobs:
     - name: test.sh
       run: |
         pwd
-        echo ${{ working-directory }}
-        echo ${{ github.repository }}
 
