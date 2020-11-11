@@ -28,6 +28,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd ..
+        pip install virtualenv
         virtualenv env
         . env/bin/activate
         python -m pip install --upgrade pip
