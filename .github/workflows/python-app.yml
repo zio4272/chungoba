@@ -21,12 +21,12 @@ jobs:
       with:
         python-version: 3.6
     - name: Install dependencies
-        run: |
-        python -m pip install --upgrade pip
-        virtualenv env
-        . env/bin/activate
-        pip install -r requirements.txt
+      run: |
+      python -m pip install --upgrade pip
+      virtualenv env
+      . env/bin/activate
+      pip install -r requirements.txt
     - name: Run Server
-        run: |
-          python manager.py debug
+      run: |
+        python manager.py debug
       
