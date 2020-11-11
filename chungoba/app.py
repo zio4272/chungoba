@@ -36,10 +36,10 @@ def create_app(config_name):
 
     api = Api(app, api_version='0.0', api_spec_url='/api/spec', title='chungoba spec', catch_all_404s=True)
 
-    # from .api.user import User
+    from .api.user import User
     
     # user
-    # api.add_resource(User, '/user')
+    api.add_resource(User, '/user')
     
     swaggerui_blueprint = get_swaggerui_blueprint('/api/docs', '/api/spec.json', config={'app_name': 'chungoba'})
     app.register_blueprint(swaggerui_blueprint, url_prefix='/api/docs')
