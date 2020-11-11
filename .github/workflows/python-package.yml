@@ -12,7 +12,7 @@ jobs:
 
     runs-on: [ubuntu-latest]
     env:
-      working-directory: ./chungoba
+      working-directory: ./
     strategy:
       matrix:
         python-version: [3.6]
@@ -27,7 +27,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd ..
         pip install virtualenv
         virtualenv env
         . env/bin/activate
