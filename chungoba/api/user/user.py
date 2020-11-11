@@ -41,7 +41,7 @@ class User(Resource):
         }
     })
     def get(self):
-        """ㅁㄴㅇㄴㅁㅇㅁㄴㅇ"""
+        """11122"""
 
         return {
             'code': 200,
