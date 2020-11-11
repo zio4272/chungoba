@@ -31,4 +31,6 @@ jobs:
     - name: test.sh
       run: |
         pwd
+      env:
+        working-directory: ./
 
