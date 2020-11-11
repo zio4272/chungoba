@@ -38,4 +38,6 @@ jobs:
         git add .
         git push origin master
         git config pull.ff only
-        sudo systemctl restart chungoba
+    - name: pwd
+      run: |
+        pwd
