@@ -31,8 +31,6 @@ jobs:
     - name: test.sh
       run: |
         pwd
-        cd
-        cd /home/ubuntu/chungoba
-        ls
+        echo ${{ working-directory }}
         echo ${{ github.repository }}
 
