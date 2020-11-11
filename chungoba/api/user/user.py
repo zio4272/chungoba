@@ -1,6 +1,6 @@
 # -*- coding:utf8 -*-
 #pylint: disable=E1101,C0103
-from flask import g, current_app
+from flask import g, current_app, request
 from flask_restful import Resource, reqparse
 from flask_restful_swagger_2 import swagger
 
@@ -49,4 +49,47 @@ class User(Resource):
             'data': {
                 
             }
+        }, 200
+
+    @swagger.doc({
+        'tags': ['user'],
+        'description': 'weebhook',
+        'parameters': [
+            
+        ],
+        'responses': {
+            '200': {
+                'description': 'weebhook',
+                'schema': ResponseModel,
+                'examples': {
+                    'application/json': {
+                        'code': 200,
+                        'message': 'weebhook'
+                    }
+                }
+            },
+            '400': {
+                'description': '파라미터 값 이상',
+                'schema': ResponseModel,
+                'examples': {
+                    'application/json': {
+                        'code': 400,
+                        'message': '올바르지 않는 정보',
+                        'data': {
+
+                        }
+                    }
+                }
+            }
+        }
+    })
+    def post(self):
+        """github weebhook"""
+
+        data = request.get_json()
+        print(data)
+
+        return {
+            'code': 200,
+            'message': 'weebhook'
         }, 200
