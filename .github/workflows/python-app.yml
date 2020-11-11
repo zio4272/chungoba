@@ -3,7 +3,7 @@
 
 name: Python application
 
-on: [push]
+on:
   pull_requres:
   branches: ['main']
   types: [opened, synchronize, closed]
