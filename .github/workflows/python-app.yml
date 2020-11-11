@@ -3,10 +3,7 @@
 
 name: Python application
 
-on:
-  pull_requres:
-  branches: ['main']
-  types: [opened, synchronize, closed]
+on: [push]
 
 jobs:
   build:
@@ -39,4 +36,10 @@ jobs:
     - name: push changed files
       run: |
         cd chungoba
+        date > generated.txt
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "generated"
+        git push
         git config --global pull.ff only
