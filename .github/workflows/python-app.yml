@@ -23,8 +23,10 @@ jobs:
       env:
         GH_ACTION_DEPLOY_KEY: ${{ secrets.GH_ACTION_DEPLOY_KEY }}
       run: |
-        echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+        cd ~/.ssh/
+        echo "$GH_ACTION_DEPLOY_KEY" > cd ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
+         ssh-keyscan github.com >> cd ~/.ssh/known_hosts
         
     - name: Install dependencies
       run: |
@@ -37,4 +39,3 @@ jobs:
         git push origin master
         git config pull.ff only
         git pull
-        
