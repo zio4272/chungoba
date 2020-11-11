@@ -35,7 +35,6 @@ jobs:
         
     - name: push changed files
       run: |
-        cd chungoba
         git add .
         git push origin master
         git config pull.ff only
