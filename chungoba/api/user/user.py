@@ -41,7 +41,7 @@ class User(Resource):
         }
     })
     def get(self):
-        """사용자로그인"""
+        """사용로그인"""
 
         return {
             'code': 200,
