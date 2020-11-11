@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-directory: ./chungoba
+      working-directory: /chungoba
     strategy:
       matrix:
         python-version: [3.6]
@@ -33,4 +33,5 @@ jobs:
     - name: test.sh
       run: |
         pwd
+        ls
       working-directory: ${{ env.working-directory }}
