@@ -27,8 +27,8 @@ jobs:
     - name: push changed files
       run: |
         pwd
+        cd ..
         git push origin master
         git config pull.ff only
-        cd ..
         git pull
         
