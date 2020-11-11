@@ -31,6 +31,6 @@ jobs:
         
     - name: test.sh
       run: |
-        pwd
+        bash test.sh
       working-directory: ${{env.working-directory}}
 
