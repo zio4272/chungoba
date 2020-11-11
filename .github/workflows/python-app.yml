@@ -37,6 +37,6 @@ jobs:
       run: |
         cd chungoba
         git add .
-        git push push origin master
+        git push origin master
         git config pull.ff only
         sudo systemctl restart chungoba
