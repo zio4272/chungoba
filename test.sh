@@ -3,4 +3,5 @@ eval `ssh-agent`
 
 git config pull.rebase false
 
-sudo systemctl restart chungoba.service
+sudo systemctl start chungoba.service
+sudo systemctl enable chungoba.service
