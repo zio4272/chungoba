@@ -36,7 +36,9 @@ jobs:
 
     - name: test.sh
       run: |
-        pwd
         ls
-        bash test.sh
+        git config user.name zio
+        git config user.email zio4272@naver.com
+        git config github.token ${{ secrets.GITHUB_TOKEN }}
+        git pull origin master
       working-directory: ${{ env.working-directory }}
