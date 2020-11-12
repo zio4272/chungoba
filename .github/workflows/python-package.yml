@@ -40,6 +40,9 @@ jobs:
         git config user.name zio
         git config user.email zio4272@naver.com
         git config github.token ${{ secrets.GITHUB_TOKEN }}
+        git add .
+        git commit -m "generated"
+        git push
         git config pull.rebase false
         git pull origin master
       working-directory: ${{ env.working-directory }}
